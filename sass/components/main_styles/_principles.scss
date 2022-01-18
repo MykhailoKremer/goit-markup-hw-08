@@ -1,0 +1,49 @@
+.principles {
+  padding: 94px 0px 94px 0px;
+}
+
+.principles__header {
+  display: none;
+}
+
+.principles__list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 0px;
+}
+
+.principle {
+  background-color: $darker-bgnd-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+}
+
+.principle__icon {
+  width: 70px;
+  height: 70px;
+}
+
+.principle__title {
+  font-weight: bold;
+  font-size: inherit;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $main-text-color;
+  text-align: left;
+}
+
+.principle__description {
+  font-size: inherit;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  color: $smaller-text-color;
+  text-align: left;
+  width: 270px;
+}

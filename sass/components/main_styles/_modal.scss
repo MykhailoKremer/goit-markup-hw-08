@@ -1,0 +1,260 @@
+.backdrop {
+  background-color: rgba(0, 0, 0, 0.2);
+
+  width: 100%;
+  height: 100%;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  &.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.modal {
+  background-color: rgba(255, 255, 255, 1);
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -250%);
+
+  width: 528px;
+  min-height: 581px;
+
+  outline: #000 1px dotted;
+  border-radius: 4px;
+
+  animation: modal-appear 3s ease-in-out 1;
+
+  .backdrop & {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.modal__closeButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  width: 30px;
+  height: 30px;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+
+  background-color: transparent;
+  cursor: pointer;
+
+  &:hover .modal__closeIcon {
+    fill: $selection-color;
+  }
+}
+
+.modal__closeIcon {
+  fill: #000;
+  transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1) fill;
+}
+
+.modal__title {
+  font-size: 20px;
+  line-height: 1.1;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  display: block;
+
+  color: #212121;
+
+  margin-top: 40px;
+  padding-left: 48px;
+  padding-right: 32px;
+}
+
+.form {
+  padding-left: 41px;
+  padding-right: 39px;
+  margin-top: 12px;
+}
+
+.form__input {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  width: 100%;
+  height: 40px;
+
+  margin-top: 4px;
+  padding: 0 10px 0 40px;
+
+  transition: 0.3s border cubic-bezier(0.4, 0, 0.2, 1);
+
+  .form__inputBox:hover & {
+    border: 1px solid $selection-color;
+    cursor: pointer;
+  }
+
+  &:focus {
+    outline: 1px solid $selection-color;
+  }
+
+  &:focus + svg {
+    fill: $selection-color;
+  }
+}
+
+.form__comment {
+  font-family: inherit;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  width: 100%;
+  height: 120px;
+
+  margin-top: 4px;
+  padding: 12px 16px;
+
+  transition: 0.3s border cubic-bezier(0.4, 0, 0.2, 1);
+  resize: none;
+
+  &::placeholder {
+    font-size: 14px;
+    line-height: 1.15;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
+
+  .form__inputBox:hover & {
+    border: 1px solid $selection-color;
+    cursor: pointer;
+  }
+
+  &:focus {
+    outline: 1px solid $selection-color;
+  }
+}
+
+.form__inputBox {
+  font-size: 12px;
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: $smaller-text-color;
+
+  position: relative;
+}
+
+.form__inputIcon {
+  display: block;
+
+  width: 18px;
+  height: 18px;
+
+  position: absolute;
+  top: 50%;
+  left: 10px;
+
+  transition: 0.3s fill cubic-bezier(0.4, 0, 0.2, 1);
+
+  .form__inputBox:hover & {
+    fill: $selection-color;
+    cursor: pointer;
+  }
+}
+
+.form__agreement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+
+  color: $smaller-text-color;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &::before {
+    content: '';
+    width: 16px;
+    height: 16px;
+
+    border: 2px solid #212121;
+    border-radius: 2px;
+
+    margin-right: 7px;
+  }
+}
+
+.form__checkbox {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  border: 0px;
+
+  margin: -1px;
+  padding: 0px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+
+  &:checked + .form__agreement::before {
+    background-color: $selection-color;
+    background-image: url(../images/icon-check.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: transparent;
+  }
+
+  &:focus + .form__agreement::before {
+    border: 2px solid $selection-color;
+  }
+}
+
+.form__agreementLink {
+  color: $selection-color;
+
+  text-decoration: underline;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+}
+
+.form__submit {
+  display: block;
+
+  margin: 30px auto 50px auto;
+  padding: 10px 55px;
+
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.9;
+  text-align: center;
+
+  background: #188ce8;
+
+  border-radius: 4px;
+  border: transparent;
+  transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+  }
+}

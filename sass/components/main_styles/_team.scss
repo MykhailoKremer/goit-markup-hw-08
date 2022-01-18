@@ -1,0 +1,95 @@
+.team {
+  background-color: $darker-bgnd-color;
+  padding-bottom: 94px;
+}
+
+.team__title {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+
+  padding: 94px 0px 50px 0px;
+  margin: 0px;
+}
+
+.team__list {
+  list-style: none;
+
+  display: flex;
+  justify-content: space-between;
+
+  padding-left: 0px;
+}
+
+.member {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+
+  background-color: #fff;
+
+  padding-bottom: 30px;
+}
+
+.member__name {
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+
+  color: $main-text-color;
+}
+
+.member__position {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+
+  color: $smaller-text-color;
+}
+
+.member-contacts {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding-left: 0px;
+}
+
+.member-contacts__button {
+  margin-right: 10px;
+}
+
+.member-contacts__button:last-child {
+  margin-right: 0px;
+}
+
+.member-contacts__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 44px;
+  height: 44px;
+
+  border-radius: 50%;
+  background-color: $main-bgnd-color;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    background-color: $selection-color;
+  }
+}
+
+.member-contacts__icon {
+  fill: #afb1b8;
+
+  width: 20px;
+  height: 20px;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .member-contacts__link:hover & {
+    fill: $main-bgnd-color;
+  }
+}
