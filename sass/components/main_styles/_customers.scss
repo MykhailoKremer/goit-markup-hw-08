@@ -1,6 +1,18 @@
 .customers {
   padding-top: 94px;
-  padding-bottom: 94px;
+  // padding-bottom: 94px;
+
+  @media screen and (max-width: 479px) {
+    padding-bottom: 60px;
+  }
+
+  @media screen and (min-width: 480px) {
+    padding-bottom: 60px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 94px;
+  }
 }
 
 .customers__title {
@@ -22,15 +34,75 @@
   padding-left: 0px;
   margin-top: 0px;
   margin-bottom: 0px;
+
+  @media screen and (max-width: 479px) {
+    flex-wrap: wrap;
+  }
+
+  @media screen and (min-width: 480px) {
+    flex-wrap: wrap;
+  }
+
+  @media screen and (min-width: 768px) {
+    flex-wrap: wrap;
+  }
 }
 
 .customers-card {
-  margin-right: 30px;
+  // @media screen and (max-width: 479px) {
+  //   margin-right: 30px;
+  //   margin-bottom: 30px;
+  // }
 
-  &:last-child {
-    margin-right: 0px;
+  // @media screen and (min-width: 480px) {
+  //   margin-right: 30px;
+  //   margin-bottom: 30px;
+  // }
+
+  @media screen and (max-width: 1199px) {
+    margin-right: 30px;
+    margin-bottom: 30px;
   }
 }
+
+.customers-card:nth-child(1),
+.customers-card:nth-child(3),
+.customers-card:nth-child(5) {
+  @media screen and (min-width: 1200px) {
+    margin-right: 30px;
+    margin-bottom: 0px;
+  }
+}
+
+.customers-card:nth-child(2),
+.customers-card:nth-child(4),
+.customers-card:nth-child(6) {
+  @media screen and (max-width: 479px) {
+    margin-right: 0;
+  }
+
+  @media screen and (min-width: 480px) {
+    margin-right: 0;
+  }
+}
+
+.customers-card:nth-child(2),
+.customers-card:nth-child(4) {
+  @media screen and (min-width: 768px) {
+    margin-right: 30px;
+  }
+}
+
+.customers-card:nth-child(3),
+.customers-card:nth-child(6) {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-right: 0;
+  }
+}
+
+// .customers-card:last-child {
+//   margin-right: 0px;
+// }
 
 .customers-card__link {
   display: flex;
@@ -47,6 +119,22 @@
   &:hover,
   &:focus {
     border: 1px solid $selection-color;
+  }
+
+  @media screen and (max-width: 479px) {
+    padding: 16px 51px;
+  }
+
+  @media screen and (min-width: 480px) {
+    padding: 16px 51px;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 16px 59px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 16px 31px;
   }
 }
 

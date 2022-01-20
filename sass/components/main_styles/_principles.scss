@@ -6,12 +6,75 @@
   display: none;
 }
 
-.principles__list {
+.principles-list {
   list-style: none;
   display: flex;
-  justify-content: space-between;
   margin: 0 auto;
   padding: 0px;
+
+  @media screen and (max-width: 479px) {
+    flex-direction: column;
+  }
+
+  @media screen and (min-width: 480px) {
+    flex-direction: column;
+  }
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+}
+
+.principles-list__item {
+  @media screen and (min-width: 768px) {
+    width: 354px;
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: center;
+    margin-right: 30px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 270px;
+    margin-right: 30px;
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: center;
+  }
+}
+
+.principles-list__item:nth-child(2) {
+  @media screen and (min-width: 768px) {
+    width: 354px;
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: center;
+    margin-right: 0px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 354px;
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: center;
+    margin-right: 30px;
+  }
+}
+
+.principles-list__item:nth-child(4) {
+  @media screen and (min-width: 768px) {
+    width: 354px;
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: center;
+    margin-right: 0px;
+  }
 }
 
 .principle {
@@ -19,9 +82,24 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 270px;
   height: 120px;
   margin-bottom: 30px;
+
+  @media screen and (max-width: 479px) {
+    width: 100%;
+  }
+
+  @media screen and (min-width: 480px) {
+    width: 100%;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 354px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 270px;
+  }
 }
 
 .principle__icon {
@@ -36,7 +114,18 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: $main-text-color;
-  text-align: left;
+
+  @media screen and (max-width: 479px) {
+    text-align: center;
+  }
+
+  @media screen and (min-width: 480px) {
+    text-align: center;
+  }
+
+  @media screen and (min-width: 768px) {
+    text-align: left;
+  }
 }
 
 .principle__description {
@@ -44,6 +133,16 @@
   line-height: 1.7;
   letter-spacing: 0.03em;
   color: $smaller-text-color;
-  text-align: left;
-  width: 270px;
+
+  @media screen and (max-width: 479px) {
+    text-align: left;
+  }
+
+  @media screen and (min-width: 480px) {
+    text-align: left;
+  }
+
+  @media screen and (min-width: 768px) {
+    text-align: left;
+  }
 }
