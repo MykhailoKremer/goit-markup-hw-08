@@ -101,7 +101,7 @@ body {
 
     position: static;
 
-    height: fit-content;
+    // height: fit-content;
   }
 }
 
@@ -288,7 +288,7 @@ body {
   list-style: none;
   padding: 0px;
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 479px) {
     display: flex;
     flex-direction: column-reverse;
     margin-top: 302px;

@@ -145,9 +145,6 @@ body {
     display: -ms-flexbox;
     display: flex;
     position: static;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
   }
 }
 
@@ -365,7 +362,7 @@ body {
   padding: 0px;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 479px) {
   .header-contacts {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2000,6 +1997,12 @@ body {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .backdrop {
+    position: absolute;
+  }
 }
 
 .modal {

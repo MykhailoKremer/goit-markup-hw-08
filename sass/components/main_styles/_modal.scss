@@ -13,6 +13,10 @@
     opacity: 0;
     pointer-events: none;
   }
+
+  @media screen and (max-width: 1200px) {
+    position: absolute;
+  }
 }
 
 .modal {
