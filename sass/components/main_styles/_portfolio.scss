@@ -80,6 +80,11 @@
   flex-wrap: wrap;
 
   padding-left: 0px;
+
+  @media screen and (max-width: 1200px) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .project {
