@@ -35,6 +35,8 @@
 
   animation: modal-appear 3s ease-in-out 1;
 
+  z-index: 3;
+
   .backdrop & {
     opacity: 1;
     transform: translate(-50%, -50%);
@@ -66,10 +68,6 @@
 
   &:hover .modal__closeIcon {
     fill: $selection-color;
-  }
-
-  @media screen and (max-width: 1199px) {
-    right: 30px;
   }
 }
 

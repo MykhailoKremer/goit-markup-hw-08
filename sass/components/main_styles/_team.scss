@@ -88,15 +88,18 @@
   @media screen and (max-width: 479px) {
     width: 100%;
     height: auto;
+    margin-bottom: 30px;
   }
 
   @media screen and (min-width: 480px) {
     width: 100%;
     height: auto;
+    margin-bottom: 30px;
   }
 
   @media screen and (min-width: 768px) {
     width: 354px;
+    height: auto;
   }
 
   @media screen and (min-width: 1200px) {
@@ -110,6 +113,14 @@
   letter-spacing: 0.03em;
 
   color: $main-text-color;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 10px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-bottom: 10px;
+  }
 }
 
 .member__position {
@@ -126,6 +137,14 @@
   justify-content: center;
   list-style: none;
   padding-left: 0px;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 15px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-bottom: 21px;
+  }
 }
 
 .member-contacts__button {
